@@ -1,0 +1,13 @@
+{
+  "name": "biblioteca",
+  "version": "1.0.0",
+  "description": "Aplicativo Lista de Leituras e Empréstimos com TDD e Jest",
+  "main": "js/livros.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

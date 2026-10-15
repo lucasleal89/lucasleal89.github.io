@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca - Leituras & Empréstimos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Biblioteca Pessoal</h1>
+  </header>
+
+  <main>
+    <div class="grid">
+      <!-- Formulário de Livros -->
+      <section class="card">
+        <h2>Cadastrar Livro</h2>
+        <form id="formLivro">
+          <input type="text" id="titulo" placeholder="Título" required>
+          <input type="text" id="autor" placeholder="Autor" required>
+          <input type="text" id="genero" placeholder="Gênero" required>
+          <input type="number" id="paginas" placeholder="Páginas" required min="1">
+          <button type="submit">Cadastrar</button>
+        </form>
+      </section>
+
+      <!-- Formulário de Empréstimos -->
+      <section class="card">
+        <h2>Registrar Empréstimo</h2>
+        <form id="formEmprestimo">
+          <input type="text" id="nomeAmigo" placeholder="Nome do Amigo" required>
+          <select id="selectLivro" required>
+            <option value="">Selecione um Livro...</option>
+          </select>
+          <input type="date" id="dataEmprestimo" required>
+          <button type="submit">Registrar Empréstimo</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Estatísticas -->
+    <section id="estatisticas" class="stats"></section>
+
+    <!-- Barra de Pesquisa e Filtros -->
+    <section class="filtros">
+      <input type="text" id="pesquisa" placeholder="Pesquisar por título ou autor...">
+      <button id="btnNaoLidos">Apenas Não Lidos</button>
+      <button id="btnTodos">Mostrar Todos</button>
+    </section>
+
+    <div class="grid">
+      <!-- Listagem de Livros -->
+      <section class="card">
+        <h2>Meus Livros</h2>
+        <div id="listaLivros"></div>
+      </section>
+
+      <!-- Listagem de Empréstimos -->
+      <section class="card">
+        <h2>Livros Emprestados</h2>
+        <div id="listaEmprestimos"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/livros.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
